@@ -1,0 +1,10 @@
+{
+  "name": "functional-bitcoin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bsv": "^0.23.0"
+  }
+}

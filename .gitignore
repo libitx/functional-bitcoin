@@ -1,0 +1,6 @@
+.DS_Store
+.bit
+
+node_modules
+scripts
+testing
