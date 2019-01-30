@@ -1,6 +1,6 @@
 # Functional Bitcoin 🤯
 
-Playing with \_unwriter's ideas of decentralized Bitcoin application protocols, and chaining small single purpose "functions" together to form an extensible protocol.
+Playing with \_unwriter's ideas of decentralized [Bitcoin application protocols](https://bitcom.bitdb.network/), and chaining small single purpose "functions" together to form an extensible protocol.
 
 
 ## Step 1 - Embed some small JavaScript functions into the blockchain
@@ -51,7 +51,7 @@ _ => {
 
 ## Step 2 - Create a transaction writing some data to the blockchain and chaining each of the functions above
 
-I've used \_unwriter's pipe methodology discussed here. I created the following transaction:
+Using \_unwriter's pipe methodology [discussed here](https://github.com/unwriter/Bitcom/issues/2), I created the following transaction:
 
 * [See transaction](https://babel.bitdb.network/query/1DHDifPvtPgKFPZMRSxmVHhiPvFmxZwbfh/ewogICJ2IjogMywKICAicSI6IHsKICAgICJmaW5kIjogewogICAgICAidHguaCI6ICJiZTg4MWQ3OWQyODMxZTZhZjE5NzVlNjU3OGQxYThjOTE3YjFlY2UwODkzNzE1YTcxYWRiNjU2ZTg4NzdjOGU2IgogICAgfSwKICAgICJsaW1pdCI6IDEKICB9Cn0=)
 
@@ -77,7 +77,7 @@ const scriptRunner = require('./src/script-runner')
 scriptRunner.loadScript('be881d79d2831e6af1975e6578d1a8c917b1ece0893715a71adb656e8877c8e6')
   .then(stack => scriptRunner.runScript(stack))
 
-// => outputs { foo: 1, bar: 2 baz: 66, qux: 99 }
+// => outputs { foo: '1', bar: '2' baz: '66', qux: '99' }
 ```
 
 This is pretty simple example, and there aren't many reason's you'd want to do this over the blockchain just to output something to your console. But these functions can be anything... the result could be put back on the blockchain as a new transaction, or posted on Twitter, or sends an SMS, or turns your home themometer up.
